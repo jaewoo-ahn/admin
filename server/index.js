@@ -9,6 +9,9 @@ import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
+//CMT data import
+import User from "./models/User.js";
+import { dataUser } from "./data/index.js";
 
 //CMT CONFIGURATION
 dotenv.config();
@@ -33,5 +36,8 @@ mongoose
   .connect(process.env.MONGO_URL, {})
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+
+    // only add one time
+    User.insertMany(dataUser);
   })
   .catch((error) => console.log(`${error} did not connect`));
