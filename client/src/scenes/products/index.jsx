@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useGetProductsQuery } from "state/api";
-import Header from "components/Header";
 import {
   Box,
   Card,
@@ -13,6 +12,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import { Header } from "components";
 
 const Product = ({
   _id,
