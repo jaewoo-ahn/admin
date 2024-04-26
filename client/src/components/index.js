@@ -6,3 +6,4 @@ export { default as Navbar } from "./Navbar";
 export { default as OverviewChart } from "./OverviewChart";
 export { default as Sidebar } from "./Sidebar";
 export { default as CustomColumnMenu } from "./DataGridCustomColumnMenu";
+export { default as StatBox } from "./StatBox";
